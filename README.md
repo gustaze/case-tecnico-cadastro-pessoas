@@ -1,7 +1,5 @@
 # Cadastro de Pessoas
 
-> Esta branch contém uma versão da aplicação preparada para execução com Docker e Docker Compose.
-
 ## Objetivo
 
 Aplicação desenvolvida como desafio técnico para cadastro de pessoas, utilizando FastAPI no backend e React no frontend.
