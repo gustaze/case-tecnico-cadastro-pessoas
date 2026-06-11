@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #001b44, #07111f);
+  color: #e5e7eb;
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.card {
+  background: #ffffff;
+  color: #696969;
+  border: none;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 18px;
+  row-gap: 14px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form-group input {
+  height: 48px;
+  font-size: 16px;
+}
+
+.form-actions{
+  grid-column: 1 / -1;
+  margin-top: 6px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 15px;
+}
+
+input:read-only {
+  background: #e5e7eb;
+  border: 1px solid #4b5563;
+  color: #374151;
+  cursor: not-allowed;
+}
+
+button {
+  text-align: center;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background: #df5d00;
+}
+
+.mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.mensagem-sucesso {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.mensagem-erro {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.resultado {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f5f7fa;
+  border-left: 5px solid #ff6b00;
+}
+
+.resultado h3 {
+  margin-top: 0;
+  color: #4199ff;
+}
+
+.resultado p {
+  margin: 8px 0;
+}
+
+.loading {
+  font-size: 13px;
+  color: #2563eb;
+  font-weight: 600;
+}
