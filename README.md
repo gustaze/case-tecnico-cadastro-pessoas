@@ -131,21 +131,13 @@ docker compose down
 
 ```bash
 cd backend
-```
 
-```bash
 python -m venv venv
-```
 
-```bash
 venv\Scripts\activate
-```
 
-```bash
 pip install -r requirements.txt
-```
 
-```bash
 uvicorn main:app --reload
 ```
 
@@ -153,13 +145,9 @@ uvicorn main:app --reload
 
 ```bash
 cd frontend
-```
 
-```bash
 npm install
-```
 
-```bash
 npm run dev
 ```
 
