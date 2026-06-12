@@ -9,7 +9,8 @@ from app.repositories.pessoa_repository import (
     buscar_por_cpf_ou_email,
     listar_logins,
     listar_pessoas,
-    buscar_pessoa_por_id
+    buscar_pessoa_por_id,
+    buscar_por_login
 )
 from app.schemas.pessoa_schema import PessoaCreate, PessoaResponse
 
@@ -83,8 +84,8 @@ def buscar_pessoas(db: Session = Depends(get_db)):
 
     return pessoas
 
-@router.get("/{pessoa_id}", response_model=PessoaResponse)
-def buscar_pessoa(pessoa_id: int, db: Session = Depends(get_db)):
+@router.get("/ID/{pessoa_id}", response_model=PessoaResponse)
+def buscar_id(pessoa_id: int, db: Session = Depends(get_db)):
     pessoa = buscar_pessoa_por_id(db, pessoa_id)
 
     if not pessoa:
@@ -94,3 +95,15 @@ def buscar_pessoa(pessoa_id: int, db: Session = Depends(get_db)):
         )
     
     return pessoa
+
+@router.get("/Login/{pessoa_login}", response_model=PessoaResponse)
+def buscar_login(pessoa_login: str, db: Session = Depends(get_db)):
+    login = buscar_por_login(db, pessoa_login)
+    
+    if not login:
+        raise HTTPException(
+            status_code=404,
+            detail="Login não existe"
+        )
+    
+    return login
